@@ -112,12 +112,16 @@ In third and final step we will focus on most promising areas and within those c
 Let's perform some basic explanatory data analysis and derive some additional info from our raw data. First let's count the **number of gyms in every area candidate**:  
 Average number of gyms in every area with radius=300m: 0.41208791208791207
 
-Let's add gyms nearby to our data table:
+Let's add gyms nearby to our data table:  
+
 ![Gyms near location of interest](Images/GymsInArea_02.PNG)
+  
 
-We calculate **distance to nearest Gym from every area candidate center** (not only those within 1000m - we want distance to closest one, regardless of how distant it is).
+We calculate **distance to nearest Gym from every area candidate center** (not only those within 1000m - we want distance to closest one, regardless of how distant it is). 
+
 ![Distance to the Gyms in the area](Images/GymsInAreaDist_03.PNG)
-
+  
+  
 We calculate that average distance to closest gym from each area center: 971.9240171739833  
 Let's crete a map showing **heatmap / density of gyms** and try to extract some meaningfull info from that. Also, let's show a few circles indicating distance of 1km, 2km and 3km from the Mel Lastman Square.
 
@@ -151,6 +155,21 @@ With growing populatio and high percentage of working people in the target group
 Let's define new, more narrow region of interest, which will include low-restaurant-count parts of Newtonbrook West and Willodale closest to Mel Lastman Square.
 
 ![Gyms density map refocused](Images/GymHeatMap_Focus_3.PNG)
+
+Not bad - this nicely covers all the pockets of low gym density in Newtonbrook West and Willodale closest to Mel Lastman Square.
+
+Let's also create new, more dense grid of location candidates restricted to our new region of interest (let's make our location candidates 200m appart) :  565 candidate neighborhood centers generated.
+
+Now let's calculate two most important things for each location candidate: number of gyms in vicinity (we'll use radius of 250 meters) and distance to closest gym.
+
+Let us now filter those locations: we're interested only in locations with **no more than one gym** in radius of **1000 meters**
+
+Locations with no more than two gyms nearby: 527  
+Locations with no gym / fitness club within 1000m: 176  
+Locations with both conditions met: 176  
+
+Let's see how this looks on a map:
+![Gyms Candidates_Focus](Images/Candidates_Focus_4.PNG)
 
 
 
