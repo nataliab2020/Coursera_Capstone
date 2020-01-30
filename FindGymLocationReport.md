@@ -32,7 +32,7 @@ Following data sources will be needed to extract/generate the required informati
 
 ### Neighborhood Candidates
 
-Let's create latitude & longitude coordinates for centroids of our candidate neighborhoods. We will create a grid of cells covering our area of interest which is aprox. 12x12 killometers centered around Berlin city center.
+Let's create latitude & longitude coordinates for centroids of our candidate neighborhoods. We will create a grid of cells covering our area of interest which is aprox. 12x12 killometers centered around North York city center.
 
 Let's first find the latitude & longitude of North York city center, using specific, well known address and Python geocoding API.
 
@@ -47,13 +47,32 @@ To accurately calculate distances we need to create our grid of locations in Car
 
 Coordinate transformation check
 -------------------------------
-North York city centre longitude=-79.4135172144644, latitude=43.767633200000006
-North York city centre  UTM X=-5292005.8722601505, Y=10508936.99077959
-North York city centre  longitude=-79.41351721446487, latitude=43.767633199999786
+North York city centre longitude=-79.4135172144644, latitude=43.767633200000006  
+North York city centre  UTM X=-5292005.8722601505, Y=10508936.99077959  
+North York city centre  longitude=-79.41351721446487, latitude=43.767633199999786  
 
 Let's create a hexagonal grid of cells: we offset every other row, and adjust vertical row spacing so that every cell center is equally distant from all it's neighbors.
 
 **364 candidate neighborhood centers generated.**
 
 Let's visualize the data we have so far: city center location and candidate neighborhood centers:
+![City center and candidate centers](Images/CandidateCenters_0.PNG)
+
+We now have the coordinates of centers of neighborhoods/areas to be evaluated, equally spaced (distance from every point to it's neighbors is exactly the same) and within ~6km from the Mel Lastman Square.
+
+Let's now use OpenStreetMap API to get approximate addresses of those locations.
+
+We now have the coordinates of centers of neighborhoods/areas to be evaluated, equally spaced (distance from every point to it's neighbors is exactly the same) and within ~6km from the Mel Lastman Square. 
+
+Let's now use OpenStreetMap API to get approximate addresses of those locations.  
+A few sample addresses:
+ '2 Anndale Drive, M2N 5M5 Toronto'    
+ '110 Doris Avenue, M2N 0A8 Toronto' 
+ '63 Hillcrest Avenue, M2N 4T5 Toronto'  
+ '67 Parkview Avenue, M2N 3Y2 Toronto'    
+ '414 Kenneth Avenue, M2N 4G1 Toronto'    
+ '65 Olive Avenue, M2N 7N1 Toronto'  
+ 
+ Let's create locations data table. Here is a segment of the table
+
 
