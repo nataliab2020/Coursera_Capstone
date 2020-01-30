@@ -112,5 +112,47 @@ In third and final step we will focus on most promising areas and within those c
 Let's perform some basic explanatory data analysis and derive some additional info from our raw data. First let's count the **number of gyms in every area candidate**:  
 Average number of gyms in every area with radius=300m: 0.41208791208791207
 
-Let's add gyms nearby to our data table
+Let's add gyms nearby to our data table:
+![Gyms near location of interest](Images/GymsInArea_02.PNG)
+
+We calculate **distance to nearest Gym from every area candidate center** (not only those within 1000m - we want distance to closest one, regardless of how distant it is).
+![Distance to the Gyms in the area](Images/GymsInAreaDist_03.PNG)
+
+We calculate that average distance to closest gym from each area center: 971.9240171739833  
+Let's crete a map showing **heatmap / density of gyms** and try to extract some meaningfull info from that. Also, let's show a few circles indicating distance of 1km, 2km and 3km from the Mel Lastman Square.
+
+Toronto boroughs boundaries geojson definition: https://open.toronto.ca/dataset/neighbourhoods/
+![Gyms density map](Images/GymDensityHeatMap_2.PNG)
+
+Looks like a few areas of low Fitness Clubs density closest to city center can be found **west from the Mel Lastman Square**. 
+Also, looks like highest density of the gyms is along the Young Street and East Sheppard Avenue.
+
+Based on this we will now focus our analysis on areas *north-west and west from North York center* - we will move the center of our area of interest and reduce it's size to have a radius of **2.5km**. This places our location candidates mostly in boroughs **Newtonbrook West and Willodale**.  
+
+**Lansing-Westgale** is not as good candidate as the previous 2 areas - big part of it is actually a cemetery.
+### Newtonbrook West and Willowdale
+
+Analysis of popular web sites often mention Newtonbrook  and Willowdale as beautiful neighbourhoods with population with above average income so we can expect people to have disposable money to spend on "healthy life habits" trending now.
+
+*"The average income in the area is above the average for Toronto and a majority of residents live in single detached or semi-detached houses, which they own."*  (https://en.wikipedia.org/wiki/Newtonbrook)
+
+*Newtonbrook's population is growing at a steady rate and about 60% of the populate are age 24-64*  
+(https://www.toronto.ca/ext/sdfa/Neighbourhood%20Profiles/pdf/2016/pdf1/cpa36.pdf)
+
+*"The Willowdale neighbourhood consists of single-family homes, condominium townhouses and high-rise condominium towers."
+(https://en.wikipedia.org/wiki/Willowdale,_Toronto)
+
+*Willodale's population is growing at a steady rate and about 60% of the populate are age 24-64*  
+https://www.toronto.ca/ext/sdfa/Neighbourhood%20Profiles/pdf/2016/pdf1/cpa37.pdf
+
+
+With growing populatio and high percentage of working people in the target group of 24-64 years, relatively close to city center and well connected, those boroughs appear to justify further analysis.
+
+Let's define new, more narrow region of interest, which will include low-restaurant-count parts of Newtonbrook West and Willodale closest to Mel Lastman Square.
+
+![Gyms density map refocused](Images/GymHeatMap_Focus_3.PNG)
+
+
+
+
 
