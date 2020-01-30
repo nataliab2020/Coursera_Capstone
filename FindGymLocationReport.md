@@ -202,6 +202,19 @@ This concludes our analysis. We have created 13 addresses representing centers o
   
 ![Final View](Images/finaleView_10.PNG)
 
+## Results and Discussion <a name="results"></a>
+Our analysis shows that although there is a great number of fitness clubs in North York (106 in our initial area of interest which was 12x12km around Mel Lastman Square), there are pockets of low restaurant density fairly close to city center. Highest concentration of gyms was detected north and east from Mel Lastman Square along Young street and East Sheppard Avenue), so we focused our attention to areas west and north-west, corresponding to borough Newtonbrook and Willowdale. Another borough was identified as potentially interesting (Lansing-Westgale, south-west from Mel Lastman Square), but since big part of it is cemetery, our attention was focused on Newtonbrook and Willowdale which offer a combination of favourable demographic, closeness to city center, strong socio-economic dynamics *and* a number of pockets of gym density.
 
+After directing our attention to this more narrow area of interest (covering approx. 5x5km south-east from Mel Lastman Square) we first created a dense grid of location candidates (spaced 100m appart); those locations were then filtered so that those with more than one gym in radius of 1000m  were removed.
 
+Those location candidates were then clustered to create zones of interest which contain greatest number of location candidates. Addresses of centers of those zones were also generated using reverse geocoding to be used as markers/starting points for more detailed local analysis based on other factors.
+
+Result of all this is 15 zones containing largest number of potential new gym locations based on number of and distance to existing venues.  
+This, of course, does not imply that those zones are actually optimal locations for a new gym! Purpose of this analysis was to only provide info on areas close to North York center but not crowded with existing fitness clubs - it is entirely possible that there is a very good reason for small number of fitness facilities in any of those areas, reasons which would make them unsuitable for a new gym regardless of lack of competition in the area.  
+Recommended zones should therefore be considered only as a starting point for more detailed analysis which could eventually result in location which has not only no nearby competition but also other factors taken into account and all other relevant conditions met.
+
+## Conclusion <a name="conclusion"></a>
+Purpose of this project was to identify North York areas close to center with low number of gyms or fitness clubs in order to aid stakeholders in narrowing down the search for optimal location for a new gym. By calculating restaurant density distribution from Foursquare data we have first identified general boroughs that justify further analysis (Newtonbrook and Willowdale), and then generated extensive collection of locations which satisfy some basic requirements regarding existing nearby gyms. Clustering of those locations was then performed in order to create major zones of interest (containing greatest number of potential locations) and addresses of those zone centers were created to be used as starting points for final exploration by stakeholders.
+
+Final decision on optimal fitness club location will be made by stakeholders based on specific characteristics of neighborhoods and locations in every recommended zone, taking into consideration additional factors like attractiveness of each location (proximity to park), proximity to major roads, real estate availability, prices, social and economic dynamics of every neighborhood etc.
 
