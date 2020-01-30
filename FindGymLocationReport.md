@@ -65,14 +65,26 @@ Let's now use OpenStreetMap API to get approximate addresses of those locations.
 We now have the coordinates of centers of neighborhoods/areas to be evaluated, equally spaced (distance from every point to it's neighbors is exactly the same) and within ~6km from the Mel Lastman Square. 
 
 Let's now use OpenStreetMap API to get approximate addresses of those locations.  
-A few sample addresses:
- '2 Anndale Drive, M2N 5M5 Toronto'    
- '110 Doris Avenue, M2N 0A8 Toronto' 
- '63 Hillcrest Avenue, M2N 4T5 Toronto'  
- '67 Parkview Avenue, M2N 3Y2 Toronto'    
- '414 Kenneth Avenue, M2N 4G1 Toronto'    
- '65 Olive Avenue, M2N 7N1 Toronto'  
+A few sample addresses:  
+ * '2 Anndale Drive, M2N 5M5 Toronto'    
+ * '110 Doris Avenue, M2N 0A8 Toronto' 
+ * '63 Hillcrest Avenue, M2N 4T5 Toronto'  
+ * '67 Parkview Avenue, M2N 3Y2 Toronto'    
+ * '414 Kenneth Avenue, M2N 4G1 Toronto'    
+ * '65 Olive Avenue, M2N 7N1 Toronto'  
  
  Let's create locations data table. Here is a segment of the table
+![Locations data](Images/LocationsSampe_01.PNG)
 
+### Foursquare
+Now that we have our location candidates, let's use Foursquare API to get info on restaurants in each neighborhood.
 
+We're interested in venues in 'Gym' category which is a subcategory in the bigger "Gym / Fitness Center" group. So we will include in out list only venues that have 'Gym' in category name, as we need info on Gyms in the neighborhood.
+
+Category IDs corresponding to Gym/Fitness Clubs were taken from Foursquare web site (https://developer.foursquare.com/docs/resources/categories): '4bf58dd8d48988d175941735' 
+
+* In total **106** Fitness venues were found in the North York 
+* Average number of gyms in North York Neigbourhoods: 0.417
+
+Let's now see all the collected Gyms in our area of interest on map: 
+![Locations data](Images/GymScaterPlot_1.PNG)
