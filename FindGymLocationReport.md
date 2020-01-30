@@ -171,6 +171,36 @@ Locations with both conditions met: 176
 Let's see how this looks on a map:
 ![Gyms Candidates_Focus](Images/Candidates_Focus_4.PNG)
 
+We now have a bunch of locations fairly close to The Mel Lastman Square (mostly in Newtonbrook West and Willodale and central-east part of Bathurst Manorboroughs), and we know that each of those locations has no more than one gym in radius of 700m. Any of those locations is a potential candidate for a new gym , at least based on nearby competition.
+
+Let's now show those good locations in a form of heatmap:
+![Gyms Candidates_Focus Heatmap](Images/Candidates_heatmap_5.PNG)
+
+What we have now is a clear indication of zones with low number of gyms in vicinity.
+
+Let us now cluster those locations to create centers of zones containing good locations. Those zones, their centers and addresses will be the final result of our analysis. 
+
+![Gyms Candidates_Focus Heat Cluster](Images/Cand_Heat_cluster_6.PNG)
+
+Our clusters represent groupings of most of the candidate locations and cluster centers are placed nicely in the middle of the zones 'rich' with location candidates.
+
+Addresses of those cluster centers will be a good starting point for exploring the neighborhoods to find the best possible location based on neighborhood specifics.
+
+Let's see those zones on a city map without heatmap, using shaded areas to indicate our clusters:
+![Gyms Candidates_Focus No Heat Cluster](Images/Cand_noHeat_cluster_7.PNG)
+
+Let's zoom in on candidate areas in Newtonbrook (Coordinate of Newtonbrook, North York, ON: [43.7938863, -79.42567902301055]):
+![Newtonbrook Candidates](Images/Newtonbrook_8.PNG)
+
+...and candidate areas in **Willowdale** (Coordinate of Willowdale, North York, Toronto, ON: [43.7615095, -79.4109234]):
+![Willowdale Candidates](Images/Willowdale_9.PNG)
+
+Finaly, let's reverse geocode those candidate area centers to get the addresses which can be presented to stakeholders.
+![Final List](Images/finalList_11.PNG)
+
+This concludes our analysis. We have created 13 addresses representing centers of zones containing locations with low number of fitness clubs nearby, all zones being fairly close to city center (all less than 4.5 km from the Mel Lastman Square, and about quarter of those less than 2km from the Mel Lastman Square). Although zones are shown on map with a radius of ~500 meters (green circles), their shape is actually somewhat irregular and their centers/addresses should be considered only as a starting point for exploring area neighborhoods in search for potential gym locations. Most of the zones are located in Newtonbrook West and Willodale boroughs, which we have identified as interesting due to demographics, being fairly close to city center and well connected by public transport.
+  
+![Final View](Images/finaleView_10.PNG)
 
 
 
