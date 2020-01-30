@@ -88,3 +88,29 @@ Category IDs corresponding to Gym/Fitness Clubs were taken from Foursquare web s
 
 Let's now see all the collected Gyms in our area of interest on map: 
 ![Locations data](Images/GymScaterPlot_1.PNG)
+
+Looking good. So now we have all the gyms in area within few kilometers from Mel Lastman square! We also know which gyms are exactly are in vicinity of every neighborhood candidate center.
+
+This concludes the data gathering phase - we're now ready to use this data for analysis to produce the report on optimal locations for a new gym!
+
+
+
+## Methodology <a name="methodology"></a>
+
+In this project we will direct our efforts on detecting areas of North York that have low gym density. We will limit our analysis to area ~6km around city center.
+
+In first step we have collected the required **data: location and type (category) of every gym within 6km from North York center** (Mel Lastman Square). We have also **identified gym venues** (according to Foursquare categorization).
+
+Second step in our analysis will be calculation and exploration of '**gym density**' across different areas of North York - we will use **heatmaps** to identify a few promising areas close to center with low number of gyms and focus our attention on those areas.
+
+In third and final step we will focus on most promising areas and within those create **clusters of locations that meet some basic requirements** established in discussion with stakeholders: we will take into consideration locations with **no more than two gyms in radius of 300 meters**. We will present map of all such locations but also create clusters (using **k-means clustering**) of those locations to identify general zones / neighborhoods / addresses which should be a starting point for final 'street level' exploration and search for optimal venue location by stakeholders.
+
+
+
+## Analysis <a name="analysis"></a>
+
+Let's perform some basic explanatory data analysis and derive some additional info from our raw data. First let's count the **number of gyms in every area candidate**:  
+Average number of gyms in every area with radius=300m: 0.41208791208791207
+
+Let's add gyms nearby to our data table
+
